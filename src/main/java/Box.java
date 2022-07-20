@@ -19,7 +19,7 @@ public class Box {
     public void add(Fruit fruit) {
         if (product.size() > 1) {
             if (fruitCompare(fruit)) {
-                throw new BoxException("ßáëîêè îòäåëüíî, àïåëüñèíû îòäåëüíî");
+                throw new BoxException("Ð¯Ð±Ð»Ð¾ÐºÐ¸ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾, Ð°Ð¿ÐµÐ»ÑŒÑÐ¸Ð½Ñ‹ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾");
             }
         }
         product.add(0, fruit);
@@ -31,7 +31,7 @@ public class Box {
 
     public void rotateFruit(Box box2) throws BoxException {
         if (fruitCompare(box2)) {
-            throw new BoxException("ßáëîêè îòäåëüíî, àïåëüñèíû îòäåëüíî");
+            throw new BoxException("Ð¯Ð±Ð»Ð¾ÐºÐ¸ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾, Ð°Ð¿ÐµÐ»ÑŒÑÐ¸Ð½Ñ‹ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾");
         }
         for (int i = product.size() - 1; i >= 0; i--) {
             box2.getFruit().add(product.get(i));
@@ -45,6 +45,4 @@ public class Box {
     public boolean fruitCompare(Fruit fruit) {
         return product.get(0).getClass() != fruit.getClass();
     }
-
-
 }
