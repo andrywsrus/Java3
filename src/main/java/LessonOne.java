@@ -3,59 +3,59 @@ import java.util.Arrays;
 
 public class LessonOne {
     public static void main(String[] args) {
-        System.out.println("Задание #1");
+        System.out.println("Р—Р°РґР°РЅРёРµ #1");
         Integer[] ourArray = {11, 22, 33, 44, 55};
-        System.out.print("Наш изначальный массив: ");
+        System.out.print("РќР°С€ РёР·РЅР°С‡Р°Р»СЊРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         System.out.println(Arrays.toString(ourArray));
         changeElementsArray(ourArray, 0, 4);
-        System.out.print("Массив после перестановки двух крайних элементов: ");
+        System.out.print("РњР°СЃСЃРёРІ РїРѕСЃР»Рµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєРё РґРІСѓС… РєСЂР°Р№РЅРёС… СЌР»РµРјРµРЅС‚РѕРІ: ");
         System.out.println(Arrays.toString(ourArray));
 
         System.out.println("");
 
-        System.out.println("Задание #2");
+        System.out.println("Р—Р°РґР°РЅРёРµ #2");
         ArrayList<Integer> listArray = new ArrayList();
         changeElementsToArrayList(listArray, ourArray);
-        System.out.print("Преобразуем массив в ArrayList: ");
+        System.out.print("РџСЂРµРѕР±СЂР°Р·СѓРµРј РјР°СЃСЃРёРІ РІ ArrayList: ");
         System.out.println(listArray);
 
         System.out.println("");
 
-        System.out.println("Задание #3");
+        System.out.println("Р—Р°РґР°РЅРёРµ #3");
 
-        Box boxOne = new Box(); // коробка 1
-        boxOne.add(new Apple()); // кладём пару яблок
+        Box boxOne = new Box(); // РєРѕСЂРѕР±РєР° 1
+        boxOne.add(new Apple()); // РєР»Р°РґС‘Рј РїР°СЂСѓ СЏР±Р»РѕРє
         boxOne.add(new Apple());
-        System.out.print("Вес 1 коробки: " + boxOne.getWeight() + ". ");
-        System.out.println("В коробке 1 хранятся " + boxOne.getFruit().get(0).getClass().getSimpleName());
+        System.out.print("Р’РµСЃ 1 РєРѕСЂРѕР±РєРё: " + boxOne.getWeight() + ". ");
+        System.out.println("Р’ РєРѕСЂРѕР±РєРµ 1 С…СЂР°РЅСЏС‚СЃСЏ " + boxOne.getFruit().get(0).getClass().getSimpleName());
 
-        Box boxTwo = new Box(); // коробка 2
-        boxTwo.add(new Orange()); // кладём пару апельсинов
+        Box boxTwo = new Box(); // РєРѕСЂРѕР±РєР° 2
+        boxTwo.add(new Orange()); // РєР»Р°РґС‘Рј РїР°СЂСѓ Р°РїРµР»СЊСЃРёРЅРѕРІ
         boxTwo.add(new Orange());
-        System.out.print("Вес 2 коробки: " + boxTwo.getWeight() + ". ");
-        System.out.println("В коробке 2 хранятся " + boxTwo.getFruit().get(0).getClass().getSimpleName());
+        System.out.print("Р’РµСЃ 2 РєРѕСЂРѕР±РєРё: " + boxTwo.getWeight() + ". ");
+        System.out.println("Р’ РєРѕСЂРѕР±РєРµ 2 С…СЂР°РЅСЏС‚СЃСЏ " + boxTwo.getFruit().get(0).getClass().getSimpleName());
 
-        System.out.println("Вес коробок c " + boxOne.getFruit().get(0).getClass().getSimpleName() + " и c " +  boxTwo.getFruit().get(0).getClass().getSimpleName() + (boxOne.compare(boxTwo) ? " одинаковый" : " разный"));
+        System.out.println("Р’РµСЃ РєРѕСЂРѕР±РѕРє c " + boxOne.getFruit().get(0).getClass().getSimpleName() + " Рё c " +  boxTwo.getFruit().get(0).getClass().getSimpleName() + (boxOne.compare(boxTwo) ? " РѕРґРёРЅР°РєРѕРІС‹Р№" : " СЂР°Р·РЅС‹Р№"));
 
-        Box boxThree = new Box(); // коробка 3
-        boxThree.add(new Apple());// кладём три яблока
+        Box boxThree = new Box(); // РєРѕСЂРѕР±РєР° 3
+        boxThree.add(new Apple());// РєР»Р°РґС‘Рј С‚СЂРё СЏР±Р»РѕРєР°
         boxThree.add(new Apple());
         boxThree.add(new Apple());
-        System.out.print("Вес 3 коробки: " + boxThree.getWeight() + ". ");
-        System.out.println("В коробке 3 хранятся " + boxThree.getFruit().get(0).getClass().getSimpleName());
+        System.out.print("Р’РµСЃ 3 РєРѕСЂРѕР±РєРё: " + boxThree.getWeight() + ". ");
+        System.out.println("Р’ РєРѕСЂРѕР±РєРµ 3 С…СЂР°РЅСЏС‚СЃСЏ " + boxThree.getFruit().get(0).getClass().getSimpleName());
 
-        boxOne.rotateFruit(boxThree); //пересыпаем
-        System.out.println("Пересыпаем 1 коробку в 3 коробку. Вес 3 коробки: " + boxThree.getWeight());
-        System.out.println("Итого:");
-        System.out.println("Вес 1 коробки: " + boxOne.getWeight());// взвешиваем 1 коробку
-        System.out.println("Вес 2 коробки: " + boxTwo.getWeight());// взвешиваем 1 коробку
-        System.out.println("Вес 3 коробки: " + boxThree.getWeight()); // взвешиваем 3 коробку
+        boxOne.rotateFruit(boxThree); //РїРµСЂРµСЃС‹РїР°РµРј
+        System.out.println("РџРµСЂРµСЃС‹РїР°РµРј 1 РєРѕСЂРѕР±РєСѓ РІ 3 РєРѕСЂРѕР±РєСѓ. Р’РµСЃ 3 РєРѕСЂРѕР±РєРё: " + boxThree.getWeight());
+        System.out.println("РС‚РѕРіРѕ:");
+        System.out.println("Р’РµСЃ 1 РєРѕСЂРѕР±РєРё: " + boxOne.getWeight());// РІР·РІРµС€РёРІР°РµРј 1 РєРѕСЂРѕР±РєСѓ
+        System.out.println("Р’РµСЃ 2 РєРѕСЂРѕР±РєРё: " + boxTwo.getWeight());// РІР·РІРµС€РёРІР°РµРј 1 РєРѕСЂРѕР±РєСѓ
+        System.out.println("Р’РµСЃ 3 РєРѕСЂРѕР±РєРё: " + boxThree.getWeight()); // РІР·РІРµС€РёРІР°РµРј 3 РєРѕСЂРѕР±РєСѓ
         System.out.println("");
         System.out.println("-----------------------------------------------------------");
-        System.out.println("если например, к апельсинам добавить яблоки, покажем ошибку");
+        System.out.println("РµСЃР»Рё РЅР°РїСЂРёРјРµСЂ, Рє Р°РїРµР»СЊСЃРёРЅР°Рј РґРѕР±Р°РІРёС‚СЊ СЏР±Р»РѕРєРё, РїРѕРєР°Р¶РµРј РѕС€РёР±РєСѓ");
         System.out.println("-----------------------------------------------------------");
         try {
-            boxTwo.rotateFruit(boxThree);        // показываем ошибку если к апельсинам добавить яблоки
+            boxTwo.rotateFruit(boxThree);        // РїРѕРєР°Р·С‹РІР°РµРј РѕС€РёР±РєСѓ РµСЃР»Рё Рє Р°РїРµР»СЊСЃРёРЅР°Рј РґРѕР±Р°РІРёС‚СЊ СЏР±Р»РѕРєРё
         } catch (BoxException e) {
             System.out.println(e);
         }
